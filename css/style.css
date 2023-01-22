@@ -573,3 +573,83 @@ section:nth-child(odd) {
     font-size: 2.8rem;
     font-weight: 600;
 }
+
+.newsletter-info-descricao {
+    font-size: 2.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0.8rem 0;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.newsletter-form-input {
+    flex: 3 1 37rem;
+    font-size: 1.8rem;
+    min-height: 6rem;
+    color: var(--clr-black);
+    border: none;
+    padding: 1rem;
+    border-radius: 0;
+   
+}   
+
+.newsletter-form-submit {
+    flex: 1;
+    font-size: 3.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    background-color: var(--clr-medium-green);
+    cursor: pointer;
+    border: none;
+    letter-spacing: .2rem;
+    padding: 1.6rem;
+    transition: var(--transition);
+}
+
+.newsletter-form-submit:hover {
+    letter-spacing: .6rem;
+}
+
+@media screen and (min-width: 570px){
+    .newsletter-c {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .newsletter-info, .newsletter-form {
+        flex: 1 1 26rem;
+    }
+} 
+   
+
+@media screen and (min-width: 960px){
+    .newsletter-form-input {
+        flex: 1;
+        height: auto;
+        margin-right: 3rem;
+    }
+    .newsletter-form-submit{
+        font-size: 2.8rem;
+    }
+} 
+   
+
+@media screen and (min-width: 1200px){
+    .newsletter-form-input {
+        flex: 2;
+     
+    }
+  
+} 
+   
+/**********************************/
+/* 8. Gallery*/
+/**********************************/
