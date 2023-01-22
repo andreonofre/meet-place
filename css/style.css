@@ -83,6 +83,7 @@ img {
     color: var(--clr-medium-green);
 }
 
+
 @media screen and (min-width: 1170px) {
     section {
         padding: 1.6rem calc((100% - 117rem - 1.6rem) / 2); 
@@ -449,4 +450,126 @@ section:nth-child(odd) {
         margin-top: 0;
       }
 
+}
+
+
+
+
+/**********************************/
+/* 6. Pacotes*/
+/**********************************/
+
+.pacotes {
+    display: flex;
+    overflow-x: auto; /* O scroll e aplica somente ao pavote e n a pagina inteira*/
+    position: relative;
+}
+
+.pacotes::after {
+    content: " ➔";
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 900;
+    color: red;
+    top: .5rem;
+    right: 5.2rem;
+    animation: arrow 1s ease-in 0s infinite alternate;
+}   
+
+@keyframes arrow {
+    from {
+        right: 5.2rem;
+    }
+
+    to {
+        right: 3.2rem;
+    }
+}
+
+
+.pacote {
+    flex-shrink: 0;
+    background-color: var(--clr-light-green);
+    max-width: 37rem;
+    cursor: pointer;
+    box-shadow: var(--dark-shadow);
+}
+
+
+.pacote + .pacote {
+    margin-left: 3rem;
+}
+
+
+.pacote-info {
+    padding: 1.6rem;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-header-titulo {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.info-body {
+    margin: 1.6rem 0;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px){
+    .pacotes {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: visible;
+        padding-bottom: 3.2rem;
+    }
+    .pacote {
+        transition: var(--transition);
+    }
+    .pacote:hover {
+        transform: scale(1.02);
+    }
+    .pacotes::after {
+        content: "";
+    }
+    .pacote + .pacote {
+        margin: 0;
+    }
+    /* Vai aplicar o espaço a partir do terceiro elemento */
+    .pacote:nth-child(n+3) {
+        margin-top: 3rem;
+    }
+} 
+
+
+@media screen and (min-width: 1150px){
+    .pacote:nth-child(3) {
+        margin-top: 0;
+    }
+} 
+    
+
+
+/**********************************/
+/* 7. News Letter*/
+/**********************************/
+
+.newsletter-c {
+    padding: 4rem 0;
+}
+
+.newsletter-info-titulo {
+    font-size: 2.8rem;
+    font-weight: 600;
 }
