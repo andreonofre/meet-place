@@ -17,7 +17,7 @@
 7. Newsletter
 8. Galeria
 9. Footer
-10. MOdal */
+10. MOOdal */
 /**********************************/
 
 
@@ -70,6 +70,7 @@ section {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 .section-titulo {
     font-size: 4.8rem;
@@ -652,4 +653,90 @@ section:nth-child(odd) {
    
 /**********************************/
 /* 8. Gallery*/
+/**********************************/
+
+.galeria {
+    padding: 0;
+}
+
+.galeria-item {
+    position: relative;
+    min-width: 17rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.galeria-item-thumb {
+    transition: var(--transition);
+}
+
+.galeria-item::before {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-black);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+    z-index: 1; 
+}
+
+.galeria-item-local {
+    position: absolute;
+    font-size: 2.4rem;
+    font-weight: 600;
+    left: 6.4rem;
+    bottom: 3.2rem;
+    color: var(--clr-white);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.galeria-item:hover .galeria-item-thumb {
+    transform: scale(1.2);
+}
+
+.galeria-item:hover .galeria-item-local {
+    transform: scale(1.2);
+    left: 3.2rem;
+    opacity: 1;
+}
+
+.galeria-item:hover.galeria-item::before {
+    opacity: .7;
+}
+
+
+@media screen and (min-width: 768px){
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .galeria-item {
+        flex: 0 0 50%; /* 0 0 Impedindo que elas cresçam ou diminuam*/
+    }
+  
+} 
+
+
+@media screen and (min-width: 960px){
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .galeria-item {
+        flex: 0 0 25%; /* 0 0 Impedindo que elas cresçam ou diminuam*/
+    }
+  
+} 
+
+/**********************************/
+/* 9. Footer */
+/**********************************/
+
+/**********************************/
+/*10. MOdal 
 /**********************************/
